@@ -1,0 +1,37 @@
+.footer {
+    background-color: #fff;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    border-top: rgb(134, 134, 134) 1px solid;
+}
+
+.footer p {
+    color: #1a1a1a;
+}
+
+.footer__list {
+    margin-left: auto;
+    margin-right: 3rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.footer__list a img {
+    width: 2rem;
+}
+
+@media (max-width: 560px) {
+    .footer {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .footer__list {
+        margin-top: 1rem;
+        justify-content: center;
+        width: 100%;    
+    }
+}

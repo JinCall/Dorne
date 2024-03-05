@@ -1,0 +1,263 @@
+.header {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 7rem;
+    border-bottom: 1px solid #fff;
+    z-index: 9;
+    position: fixed;
+    transition: 500ms;
+}
+
+.header.move {
+    height: 5.5rem;
+    position: fixed;
+    border: none;
+    z-index: 999;
+}
+
+.header.move::after {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(14, 1, 32);
+    opacity: 0.75; 
+    pointer-events: none;
+    z-index: -1;
+}
+
+.header__logo {
+    margin: 0 4rem;
+}
+
+.header__list {
+    margin-right: 3rem;
+}
+
+.header__list__link p {
+    cursor: pointer;
+}
+
+.header__list, .header__button__link {
+    display: flex;
+    align-items: center;
+}
+
+.header__list ul, .header__button ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.header__button {
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+.header__button ul {
+    display: flex;
+}
+
+#searchBtn img {
+    width: 1.5rem;
+    margin-right: .5rem;
+}
+
+.header__list__link__menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 101%;
+    left: -130%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #341a79;
+    transition: 800ms;
+}
+
+.header__list__link__menu.active {
+    left: 0;
+}
+
+#searchBtn {
+    cursor: pointer;
+}
+
+.header__list__link__menu a {
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.header__button__link__search {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: -130%;
+    background-color: #341a79;
+    transition: 500ms;
+}
+
+.header__button__link__search.active {
+    top: 0;
+}
+
+.header__button__link__search__input {
+    height: 2rem;
+    width: 30%;
+}
+
+.header__button__link__search img {
+    position: absolute;
+    right: 35.5%;
+    width: 1.5rem;
+    cursor: pointer;
+}
+
+.headerMobile {
+    display: none;
+    z-index: 999;
+    transition: 500ms;
+}
+
+.headerMobile.move {
+    position: fixed;
+    border: none;
+    z-index: 999;
+    transition: 500ms;
+}
+
+.headerMobile.move::after {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(14, 1, 32);
+    opacity: 0.75; 
+    pointer-events: none;
+    z-index: -1;
+}
+
+.headerMobile__logo {
+    margin-left: 2rem;
+}
+
+.headerMobile__list {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: -130%;
+    transition: 500ms;
+    background-color: #341a79;
+    display: flex;
+    justify-content: center;
+}
+
+.headerMobile__list ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.headerMobile__list.active {
+    left: 0;
+}
+
+.headerMobile__list__link {
+    width: 100%;
+}
+
+.headerMobile__list__link__search {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: -130%;
+    background-color: #341a79;
+    transition: 500ms;
+}
+
+.headerMobile__list__link__search.active {
+    top: 0;
+}
+
+.headerMobile__list__link__search__input {
+    height: 3rem;
+    width: 80%;
+}
+
+.headerMobile__list__link__search img {
+    position: absolute;
+    right: 10.5%;
+    width: 2rem;
+    cursor: pointer;
+}
+
+.headerMobile__list__link a, .headerMobile__list__link p {
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.headerMobile__list__link__menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 101%;
+    left: -130%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #341a79;
+    transition: 800ms;
+}
+
+.headerMobile__list__link__menu a {
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.headerMobile__list__link__menu.active {
+    left: 0;
+}
+
+@media (max-width: 1000px) {
+    .header {
+        display: none;
+    }
+
+    .headerMobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        height: 6rem;
+        width: 100%;
+        background-color: transparent;
+        z-index: 999;
+    }
+}
